@@ -1,0 +1,17 @@
+<div ng-show="loading" class="jumbotron detail_box clearfix">
+  <h1>{{movie.title}}</h1>
+   <div class="detail_img ">
+   <img ng-src={{movie.images.large}}  alt="...">
+   </div>
+   <div class="detail_message">
+   <p>{{movie.summary}}</p>
+   </div>
+</div>
+
+
+<div class="mask"  ng-hide="loading">
+<div class="spinner">
+  <div class="dot1"></div>
+  <div class="dot2"></div>
+</div>
+</div>

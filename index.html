@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="doubanApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>兔兔电影站</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/detil.css" rel="stylesheet">
+</head>
+
+<body ng-cloak >
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid nav_head">
+            <div class="navbar-header ">
+                <p><a href="#">兔兔电影站</a></p>
+                  <ul class="tutu_title">
+                    <li ng-class="{active:rootStatus=='hot'}"><a href="#/hot">正在热映</a></li>
+                    <li ng-class="{active:rootStatus=='will'}"><a href="#/will">即将上映</a></li>
+                    <li ng-class="{active:rootStatus=='top250'}"><a href="#/top250">兔兔250</a></li>
+                </ul>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">      
+                <search></search>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 ">
+            <ng-view></ng-view>         
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="hot/hot.js"></script>
+    <script src="js/majService.js"></script>
+    <script src="js/appControl.js"></script>
+    <script src="detail/detail.js"></script>
+
+</body>
+
+ 
+</html>
